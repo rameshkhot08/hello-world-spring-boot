@@ -32,6 +32,8 @@ jobs:
           path: target/
       - name: Build Container image
         run: docker build -t ramkhot/testrepo/hello-world:1.0 .
+      - name: echo uname
+        run: echo ${{ secrets.DOCKER_USER }} ${{ secrets.DOCKER_PASSWORD }} 
       - name: Log in to Docker Hub
         env:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}   
