@@ -25,13 +25,11 @@ jobs:
           name: temp-artifact
           path: ${{ github.workspace }}/target/*.jar
           retention-days: 1
-		
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v1
         with:
           name: temp-artifact
           path: target/
-      
       - name: Build Container image
         run: docker build -t ${{ secrets.DOCKER_REPO }}:latest .
       - name: Log in to Docker Hub
