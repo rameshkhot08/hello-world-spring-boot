@@ -2,9 +2,6 @@ name: Build asset clean-up app
 
 on: 
   push:
-     branches:
-       -develop
-
 jobs:
   build-repo:
     runs-on: ubuntu-latest
