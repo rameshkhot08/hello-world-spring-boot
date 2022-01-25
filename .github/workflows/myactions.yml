@@ -3,6 +3,7 @@ name: Build asset clean-up app
 on: 
   push:
     branches:
+      - master
       - develop
 jobs:
   build-repo:
